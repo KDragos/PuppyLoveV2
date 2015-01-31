@@ -1,0 +1,140 @@
+/************************
+	 Reset 
+*************************/
+* {
+  margin: 0;
+  padding: 0; }
+  * a {
+    text-decoration: none; }
+
+/***********************
+	Mixins
+************************/
+/*************************
+	Top/Hero Section
+***************************/
+.top {
+  background-color: #00afbe;
+  min-height: 300px; }
+
+.header {
+  width: 960px;
+  margin: 0 auto;
+  background-color: orange;
+  position: relative;
+  min-height: 125px; }
+  .header button {
+    height: 30px;
+    width: 75px;
+    color: white; }
+
+.logo {
+  background-color: red;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+form {
+  position: absolute;
+  top: 10px;
+  right: 0; }
+
+nav {
+  background-color: green;
+  min-height: 40px;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+  nav a {
+    color: white;
+    display: inline-block;
+    padding: 15px;
+    margin: 0 5px; }
+
+.slogan {
+  width: 960px;
+  margin: 0 auto;
+  background-color: lightblue;
+  min-height: 300px;
+  position: relative; }
+  .slogan div {
+    background-color: magenta;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    text-align: center;
+    color: white; }
+  .slogan h2 {
+    margin: 10px auto; }
+
+.bottom {
+  background-color: purple; }
+
+.infobox {
+  width: 960px;
+  margin: 0 auto;
+  background-color: green;
+  min-height: 50px;
+  text-align: center; }
+  .infobox div {
+    background-color: lime;
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    min-height: 125px;
+    padding: 10px 10px 0 10px;
+    margin: 3px 10px;
+    transform: translateY(-20px); }
+  .infobox p {
+    margin: 5px auto; }
+  .infobox button {
+    width: 150px;
+    height: 25px;
+    margin-top: 10px; }
+
+main {
+  width: 960px;
+  margin: 0 auto;
+  background-color: pink; }
+
+.featured {
+  background-color: lime;
+  float: left;
+  min-height: 340px;
+  max-width: 400px; }
+  .featured div {
+    background-color: red;
+    margin: 5px;
+    overflow: hidden;
+    margin-top: 10px; }
+  .featured h4 {
+    background-color: yellow;
+    margin-left: 75px; }
+  .featured p {
+    background-color: yellow;
+    margin-left: 75px; }
+  .featured img {
+    display: inline-block;
+    float: left; }
+
+.profile {
+  background-color: blue;
+  min-height: 350px;
+  margin-left: 400px;
+  padding-left: 5px; }
+  .profile div {
+    display: inline-block;
+    vertical-align: top;
+    width: 145px;
+    margin: 10px; }
+  .profile h4 {
+    background-color: yellow;
+    border-bottom: 1px solid black; }
+  .profile p {
+    background-color: yellow; }
+
+/*# sourceMappingURL=stylesheet.css.map */
