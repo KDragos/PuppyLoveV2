@@ -86,11 +86,6 @@
 					<p>Young and fierce, that's all I have to say.</p>
 				</div>
 				<div>
-					<img src="images/dog1.png" alt="Ralf">
-					<h4>Ralf</h4>
-					<p>This old mut likes to roll in the dirt.</p>
-				</div>
-				<div>
 					<img src="images/dog2.png" alt="Max">
 					<h4>Max</h4>
 					<p>If there was ever a young pup that liked grass, it's Max.</p>
@@ -99,6 +94,11 @@
 					<img src="images/dog3.png" alt="Rudy">
 					<h4>Rudy</h4>
 					<p>Young and fierce, that's all I have to say.</p>
+				</div>
+				<div>
+					<img src="images/dog1.png" alt="Ralf">
+					<h4>Ralf</h4>
+					<p>This old mut likes to roll in the dirt.</p>
 				</div>
 			</div>
 		</main>

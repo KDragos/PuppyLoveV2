@@ -7,9 +7,6 @@
   * a {
     text-decoration: none; }
 
-/***********************
-	Mixins
-************************/
 /*************************
 	Top/Hero Section
 ***************************/
@@ -21,8 +18,8 @@
   width: 960px;
   margin: 0 auto;
   background-color: orange;
-  position: relative;
-  min-height: 125px; }
+  min-height: 125px;
+  position: relative; }
   .header button {
     height: 30px;
     width: 75px;
@@ -71,6 +68,9 @@ nav {
   .slogan h2 {
     margin: 10px auto; }
 
+/********************************
+	Bottom Section
+**********************************/
 .bottom {
   background-color: purple; }
 
@@ -82,10 +82,10 @@ nav {
   text-align: center; }
   .infobox div {
     background-color: lime;
+    min-height: 125px;
     display: inline-block;
     width: 250px;
     text-align: center;
-    min-height: 125px;
     padding: 10px 10px 0 10px;
     margin: 3px 10px;
     transform: translateY(-20px); }
@@ -96,6 +96,9 @@ nav {
     height: 25px;
     margin-top: 10px; }
 
+/***** 
+Bottom Left Section
+*****/
 main {
   width: 960px;
   margin: 0 auto;
@@ -103,24 +106,24 @@ main {
 
 .featured {
   background-color: lime;
+  min-height: 400px;
   float: left;
-  min-height: 340px;
   max-width: 400px; }
   .featured div {
     background-color: red;
     margin: 5px;
     overflow: hidden;
     margin-top: 10px; }
-  .featured h4 {
-    background-color: yellow;
-    margin-left: 75px; }
-  .featured p {
+  .featured h4, .featured p {
     background-color: yellow;
     margin-left: 75px; }
   .featured img {
     display: inline-block;
     float: left; }
 
+/*****
+Bottom Right Section
+******/
 .profile {
   background-color: blue;
   min-height: 350px;
