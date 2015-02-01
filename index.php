@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Milestone 3 CSS Project</title>
+	<link href='http://fonts.googleapis.com/css?family=Lato|Lobster' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/stylesheet.css">
 </head>
@@ -27,8 +28,8 @@
 		</div>
 		<div class="slogan">
 			<div>
-				<h2><strong>Great</strong> People, <strong>Better</strong> Dogs!</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quibusdam molestias laudantium doloribus perferendis aut laborum rerum at ad veritatis animi sequi cupiditate corrupti magni libero, quidem magnam dicta eos.</p>
+				<h1><strong>Great</strong> People, <strong>Better</strong> Dogs!</h1>
+				<p>Welcome to tbe best site on the internet. We really hope you buy our products because we really love to make money!</p>
 			</div>
 		</div>
 	</div>

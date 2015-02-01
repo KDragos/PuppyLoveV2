@@ -4,6 +4,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: Lato, sans-serif;
 	a {
 		text-decoration: none;
 	}
@@ -25,29 +26,41 @@
 	min-height: $height;
 }
 
-/*************************
+/*************************  
 	Top/Hero Section
 ***************************/
 .top {
-	@include bcgcolor-and-minheight(#00afbe, 300px);
+	// @include bcgcolor-and-minheight(#00afbe, 300px);
+	background: radial-gradient(
+      rgba(#008fac, 0.40), 
+      rgba(#008FAC, 1)
+    ), url('../images/bg.jpg') no-repeat;
+	background-size: cover;
 }
 
 
 .header {
 	@include in-the-middle;
-	@include bcgcolor-and-minheight(orange, 125px);
 	position: relative;
+	min-height: 125px;
 	button {
-		height: 30px;
+		height: 25px;
 		width: 75px;
+		background-color: #F00;
 		color: white;
+		border: none;
+	}
+	input {
+		background-color: transparent;
+		border: 1px solid #BBB;
 	}
 }
 
 .logo {
-	background-color: red;
+	font-family: Lobster;
+	position:absolute;
+	font-size: 45px;
 	color: white;
-	position: absolute;
 	top: 0;
 	left: 0;
 }
@@ -59,9 +72,10 @@ form {
 }
 
 nav {
-	@include bcgcolor-and-minheight(green, 40px);
 	position: absolute;
 	text-align: center;
+	border-top: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -75,11 +89,9 @@ nav {
 
 .slogan {
 	@include in-the-middle;
-	background-color: lightblue;
 	min-height: 300px;
 	position:relative;
 	div {
-		background-color: magenta;
 		position: absolute;
 		left: 0;
 		right: 0;
@@ -87,9 +99,13 @@ nav {
 		text-align: center;
 		color: white;
 	}
-	h2 {
+	h1 {
+		margin: 15px auto;
+	}
+	p {
 		margin: 10px auto;
 	}	
+	
 }
 
 /********************************
@@ -97,17 +113,17 @@ nav {
 **********************************/
 
 .bottom {
-	background-color: purple;
+	background-color: #D5E1EB;
+	padding-bottom: 25px;
 }
 
 .infobox {
 	@include in-the-middle;
-	@include bcgcolor-and-minheight(green, 50px);
 	text-align: center;
 	div {
-		@include bcgcolor-and-minheight(lime, 125px);
+		@include bcgcolor-and-minheight(#fff, 125px);
 		display: inline-block;
-		width: 250px;
+		width: 275px;
 		text-align: center;
 		padding: 10px 10px 0 10px;
 		margin: 3px 10px;
@@ -117,9 +133,37 @@ nav {
 		margin: 5px auto;
 	}
 	button {
-		width: 150px;
+		min-width: 75px;
 		height: 25px;
-		margin-top: 10px;
+		padding: 1px;
+		margin: 10px auto;
+		border-radius: 5px;
+		background-color: transparent;
+	}
+}
+
+
+.infobox > div:first-child {
+	box-shadow: 0 -5px 0 #f00;
+	button {
+		border: 2px solid #f00;
+		color: #f00;
+	}
+}
+
+.infobox > div:nth-child(2) {
+	box-shadow: 0 -5px 0 #5dd711;
+	button {
+		border: 2px solid #5dd711;
+		color: #5dd711;
+	}
+}
+
+.infobox > div:last-child {
+	box-shadow: 0 -5px 0 #0081D4;
+	button {
+		border: 2px solid #0081D4;
+		color: #0081D4;
 	}
 }
 
@@ -128,22 +172,28 @@ Bottom Left Section
 *****/
 main {
 	@include in-the-middle;
-	background-color: pink;
+	background-color: #FFF;
+	box-shadow: 0 -5px 5px #ccc;
 }
+
 .featured {
-	@include bcgcolor-and-minheight(lime, 400px);
 	float: left;
 	max-width: 400px;
 	div {
-		background-color: red;
 		margin: 5px;
 		overflow:hidden;
 		margin-top: 10px;
 	}	
 	h4, p {
-		background-color: yellow;
+		background-color: #E6F3fa;
 		margin-left: 75px;
+		padding-left: 5px;
 	}
+
+	h4 {
+		color: #2997D9;
+	}
+
 	img {
 		display: inline-block;
 		float: left;
@@ -156,8 +206,7 @@ Bottom Right Section
 ******/
 
 .profile {
-	@include bcgcolor-and-minheight(blue, 350px);
-	margin-left: 400px;
+	margin-left: 410px;
 	padding-left: 5px;
 	div {
 		display:inline-block;
@@ -166,10 +215,11 @@ Bottom Right Section
 		margin: 10px;
 	}
 	h4  {
-		background-color: yellow;
-		border-bottom: 1px solid black;
+		background-color: #6fdc2c;
+		color: #404006;
 	}
 	p {
-		background-color: yellow;
+		background-color: #DFF2D5;
+		color: #368246;
 	}
 }
