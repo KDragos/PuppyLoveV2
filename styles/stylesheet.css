@@ -1,34 +1,40 @@
 /************************
+	Variables
+*************************/
+/************************
 	 Reset 
 *************************/
-* {
-  margin: 0;
-  padding: 0;
-  font-family: Lato, sans-serif; }
-  * a {
-    text-decoration: none; }
+a {
+  text-decoration: none; }
 
 /*************************  
 	Top/Hero Section
 ***************************/
-.top {
+.hero {
   background: radial-gradient(rgba(0, 143, 172, 0.4), #008fac), url("../images/bg.jpg") no-repeat;
   background-size: cover; }
 
-.header {
+.hero > div {
+  position: relative;
   width: 960px;
-  margin: 0 auto;
+  margin: 0 auto; }
+
+header {
   position: relative;
   min-height: 125px; }
-  .header button {
-    height: 25px;
-    width: 75px;
-    background-color: #F00;
-    color: white;
-    border: none; }
-  .header input {
-    background-color: transparent;
-    border: 1px solid #BBB; }
+  header form {
+    position: absolute;
+    top: 10px;
+    right: 0; }
+    header form button {
+      height: 25px;
+      width: 75px;
+      background-color: #fd2a00;
+      color: white;
+      border: none; }
+    header form input {
+      background-color: transparent;
+      border: 1px solid #BBB; }
 
 .logo {
   font-family: Lobster;
@@ -38,16 +44,11 @@
   top: 0;
   left: 0; }
 
-form {
-  position: absolute;
-  top: 10px;
-  right: 0; }
-
 nav {
   position: absolute;
   text-align: center;
-  border-top: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   bottom: 0;
   left: 0;
   right: 0; }
@@ -58,34 +59,39 @@ nav {
     margin: 0 5px; }
 
 .slogan {
-  width: 960px;
-  margin: 0 auto;
-  min-height: 300px;
-  position: relative; }
-  .slogan div {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 30px;
-    text-align: center;
-    color: white; }
+  min-height: 175px;
+  text-align: center;
+  color: white;
+  padding-top: 100px; }
   .slogan h1 {
-    margin: 15px auto; }
+    font-size: 30pt;
+    font-weight: lighter; }
+    .slogan h1 strong {
+      font-weight: 800px; }
   .slogan p {
-    margin: 10px auto; }
+    margin: 0 auto; }
 
 /********************************
 	Bottom Section
 **********************************/
-.bottom {
+.mainContent {
   background-color: #D5E1EB;
   padding-bottom: 25px; }
+  .mainContent h4, .mainContent p {
+    margin: 0; }
 
-.infobox {
+.mainSiteContents {
+  width: 960px;
+  margin: 0 auto; }
+
+.info {
+  box-shadow: 0 0 20px -5px #000; }
+
+.infoboxes {
   width: 960px;
   margin: 0 auto;
   text-align: center; }
-  .infobox div {
+  .infoboxes div {
     background-color: #fff;
     min-height: 125px;
     display: inline-block;
@@ -94,9 +100,9 @@ nav {
     padding: 10px 10px 0 10px;
     margin: 3px 10px;
     transform: translateY(-20px); }
-  .infobox p {
+  .infoboxes p {
     margin: 5px auto; }
-  .infobox button {
+  .infoboxes button {
     min-width: 75px;
     height: 25px;
     padding: 1px;
@@ -104,65 +110,75 @@ nav {
     border-radius: 5px;
     background-color: transparent; }
 
-.infobox > div:first-child {
-  box-shadow: 0 -5px 0 #f00; }
-  .infobox > div:first-child button {
-    border: 2px solid #f00;
-    color: #f00; }
+.infoboxes > div:first-child {
+  border-top: 5px solid #f00; }
+  .infoboxes > div:first-child button {
+    color: #f00;
+    border: 2px solid #f00; }
 
-.infobox > div:nth-child(2) {
-  box-shadow: 0 -5px 0 #5dd711; }
-  .infobox > div:nth-child(2) button {
-    border: 2px solid #5dd711;
-    color: #5dd711; }
+.infoboxes > div:nth-child(2) {
+  border-top: 5px solid #5dd711; }
+  .infoboxes > div:nth-child(2) button {
+    color: #5dd711;
+    border: 2px solid #5dd711; }
 
-.infobox > div:last-child {
-  box-shadow: 0 -5px 0 #0081D4; }
-  .infobox > div:last-child button {
-    border: 2px solid #0081D4;
-    color: #0081D4; }
+.infoboxes > div:last-child {
+  border-top: 5px solid #0081D4; }
+  .infoboxes > div:last-child button {
+    color: #0081D4;
+    border: 2px solid #0081D4; }
 
-/***** 
-Bottom Left Section
+/*****
+Bottom Section
 *****/
 main {
   width: 960px;
   margin: 0 auto;
   background-color: #FFF;
-  box-shadow: 0 -5px 5px #ccc; }
+  overflow: hidden; }
 
-.featured {
+/***** 
+Bottom Left Section
+*****/
+aside {
   float: left;
-  max-width: 400px; }
-  .featured div {
+  max-width: 425px;
+  padding: 10px;
+  margin-left: 5px; }
+  aside div {
     margin: 5px;
     overflow: hidden;
-    margin-top: 10px; }
-  .featured h4, .featured p {
-    background-color: #E6F3fa;
-    margin-left: 75px;
-    padding-left: 5px; }
-  .featured h4 {
+    margin-top: 10px;
+    background-color: #E6F3fa; }
+  aside h4, aside p {
+    margin-left: 80px;
+    padding-left: 15px; }
+  aside h4 {
     color: #2997D9; }
-  .featured img {
+  aside img {
     display: inline-block;
     float: left; }
 
 /*****
 Bottom Right Section
 ******/
-.profile {
-  margin-left: 410px;
+section {
+  margin-left: 425px;
+  margin-top: 10px;
   padding-left: 5px; }
-  .profile div {
+  section img {
+    display: block; }
+  section div {
     display: inline-block;
+    margin: 5px;
     vertical-align: top;
     width: 145px;
     margin: 10px; }
-  .profile h4 {
+  section h4 {
     background-color: #6fdc2c;
-    color: #404006; }
-  .profile p {
+    color: #547700;
+    font-weight: lighter; }
+  section p {
     background-color: #DFF2D5;
     color: #368246; }
 

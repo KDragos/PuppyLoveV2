@@ -1,13 +1,15 @@
 /************************
+	Variables
+*************************/
+
+$site-width: 960px;
+
+/************************
 	 Reset 
 *************************/
-* {
-	margin: 0;
-	padding: 0;
-	font-family: Lato, sans-serif;
-	a {
-		text-decoration: none;
-	}
+
+a {
+	text-decoration: none;
 }
 
 // **********************
@@ -15,8 +17,8 @@
 // ***********************
 
 // To get the divs centered on the page.
-@mixin in-the-middle {
-	width: 960px;
+@mixin in-the-middle($site-width) {
+	width: $site-width;
 	margin: 0 auto;
 }
 
@@ -29,8 +31,7 @@
 /*************************  
 	Top/Hero Section
 ***************************/
-.top {
-	// @include bcgcolor-and-minheight(#00afbe, 300px);
+.hero {
 	background: radial-gradient(
       rgba(#008fac, 0.40), 
       rgba(#008FAC, 1)
@@ -38,21 +39,29 @@
 	background-size: cover;
 }
 
+.hero > div {
+	position: relative;
+	@include in-the-middle($site-width);
+}
 
-.header {
-	@include in-the-middle;
+header {
 	position: relative;
 	min-height: 125px;
-	button {
-		height: 25px;
-		width: 75px;
-		background-color: #F00;
-		color: white;
-		border: none;
-	}
-	input {
-		background-color: transparent;
-		border: 1px solid #BBB;
+	form {
+		position: absolute;
+		top: 10px;
+		right: 0;
+		button {
+			height: 25px;
+			width: 75px;
+			background-color: rgb(253, 42, 0);
+			color: white;
+			border: none;
+		}
+		input {
+			background-color: transparent;
+			border: 1px solid #BBB;
+		}
 	}
 }
 
@@ -65,17 +74,12 @@
 	left: 0;
 }
 
-form {
-	position: absolute;
-	top: 10px;
-	right: 0;
-}
 
 nav {
 	position: absolute;
 	text-align: center;
-	border-top: 1px solid #FFF;
-	border-bottom: 1px solid #FFF;
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -88,37 +92,47 @@ nav {
 }
 
 .slogan {
-	@include in-the-middle;
-	min-height: 300px;
-	position:relative;
-	div {
-		position: absolute;
-		left: 0;
-		right: 0;
-		bottom: 30px;
-		text-align: center;
-		color: white;
-	}
+	min-height: 175px;
+	text-align: center;
+	color: white;
+	padding-top: 100px;
 	h1 {
-		margin: 15px auto;
+		font-size: 30pt;
+		font-weight: lighter;
+		strong {
+			font-weight: 800px;
+		}
 	}
 	p {
-		margin: 10px auto;
+		margin: 0 auto;
 	}	
-	
-}
+}	
+
 
 /********************************
 	Bottom Section
 **********************************/
 
-.bottom {
+.mainContent {
 	background-color: #D5E1EB;
 	padding-bottom: 25px;
+	h4, p {
+		margin: 0;
+	}
 }
 
-.infobox {
-	@include in-the-middle;
+.mainSiteContents {
+	@include in-the-middle($site-width);
+}
+
+.info {
+		box-shadow: 0 0 20px -5px #000;
+}
+
+
+.infoboxes {
+	@include in-the-middle($site-width);
+
 	text-align: center;
 	div {
 		@include bcgcolor-and-minheight(#fff, 125px);
@@ -143,51 +157,61 @@ nav {
 }
 
 
-.infobox > div:first-child {
-	box-shadow: 0 -5px 0 #f00;
+.infoboxes > div:first-child {
+	border-top: 5px solid #f00;
 	button {
-		border: 2px solid #f00;
 		color: #f00;
+		border: 2px solid #f00;
 	}
 }
 
-.infobox > div:nth-child(2) {
-	box-shadow: 0 -5px 0 #5dd711;
+.infoboxes > div:nth-child(2) {
+	border-top: 5px solid #5dd711;
 	button {
-		border: 2px solid #5dd711;
 		color: #5dd711;
+		border: 2px solid #5dd711;
 	}
 }
 
-.infobox > div:last-child {
-	box-shadow: 0 -5px 0 #0081D4;
+.infoboxes > div:last-child {
+	border-top: 5px solid #0081D4;
 	button {
-		border: 2px solid #0081D4;
 		color: #0081D4;
+		border: 2px solid #0081D4;
 	}
 }
+
+
+/*****
+Bottom Section
+*****/
+
+main {
+	@include in-the-middle($site-width);
+	background-color: #FFF;
+	// box-shadow: 0 -5px 5px #ccc;
+	overflow:hidden;
+}
+
 
 /***** 
 Bottom Left Section
 *****/
-main {
-	@include in-the-middle;
-	background-color: #FFF;
-	box-shadow: 0 -5px 5px #ccc;
-}
 
-.featured {
+aside {
 	float: left;
-	max-width: 400px;
+	max-width: 425px;
+	padding: 10px;
+	margin-left: 5px;
 	div {
 		margin: 5px;
 		overflow:hidden;
 		margin-top: 10px;
+		background-color: #E6F3fa;
 	}	
 	h4, p {
-		background-color: #E6F3fa;
-		margin-left: 75px;
-		padding-left: 5px;
+		margin-left: 80px;
+		padding-left: 15px;
 	}
 
 	h4 {
@@ -205,18 +229,24 @@ main {
 Bottom Right Section
 ******/
 
-.profile {
-	margin-left: 410px;
+section {
+	margin-left: 425px;
+	margin-top: 10px;
 	padding-left: 5px;
+	img {
+		display: block;
+	}
 	div {
 		display:inline-block;
+		margin: 5px;
 		vertical-align: top;
 		width: 145px;
 		margin: 10px;
 	}
 	h4  {
 		background-color: #6fdc2c;
-		color: #404006;
+		color: #547700;
+		font-weight: lighter;
 	}
 	p {
 		background-color: #DFF2D5;
